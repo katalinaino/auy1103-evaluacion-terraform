@@ -1,0 +1,34 @@
+# ============================================
+# VALORES PARA LA EVALUACIÓN FINAL
+# ============================================
+
+# Configuración básica
+aws_region     = "us-east-1"
+existing_vpc_id = "vpc-0c968fce5c360ecb5"
+environment    = "evaluacion"
+project_name   = "auy1103-final"
+student_id     = "tu_numero_estudiante"
+
+# Configuración de instancias
+instance_count           = 4
+instance_root_volume_size = 20
+availability_zones       = ["us-east-1a", "us-east-1b"]
+
+# Configuración de base de datos
+db_allocated_storage    = 20
+db_engine              = "mysql"
+db_engine_version      = "8.0"
+db_instance_class      = "db.t2.micro"
+db_username            = "admin"
+db_password            = "Evaluacion2024!"  # Cambia esto
+db_parameter_group     = "default.mysql8.0"
+db_skip_final_snapshot = true
+db_publicly_accessible = false
+
+# Tags adicionales
+common_tags = {
+  StudentName = "Tu Nombre"
+  Instructor  = "Nombre del Docente"
+  Date        = "2024"
+  Module      = "Infraestructura como Código I"
+}
